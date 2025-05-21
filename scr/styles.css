@@ -1,0 +1,246 @@
+/* === BASE STYLES === */
+:root {
+  --pink: #FADADD;
+  --pink-soft: rgba(250, 218, 221, 0.2);
+  --mint: #DFF5E3;
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --border-radius: 0.5rem;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* === UTILITIES === */
+.text-pink {
+  color: var(--pink) !important;
+}
+
+.bg-pink {
+  background-color: var(--pink) !important;
+}
+
+.bg-pink-soft {
+  background-color: var(--pink-soft) !important;
+}
+
+.bg-mint {
+  background-color: var(--mint) !important;
+}
+
+.btn-pink {
+  background-color: var(--pink);
+  color: #333;
+  border: none;
+  transition: opacity 0.3s;
+}
+
+.btn-pink:hover,
+.btn-pink:focus {
+  background-color: var(--pink);
+  opacity: 0.85;
+  color: #333;
+}
+
+.btn-mint {
+  background-color: var(--mint);
+  color: #333;
+  border: none;
+  transition: opacity 0.3s;
+}
+
+.btn-mint:hover,
+.btn-mint:focus {
+  background-color: var(--mint);
+  opacity: 0.85;
+  color: #333;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+/* === FEATHER ICONS === */
+.feather {
+  width: 20px;
+  height: 20px;
+}
+
+.feather-small {
+  width: 16px;
+  height: 16px;
+}
+
+/* === NAVIGATION === */
+.navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--pink);
+}
+
+/* === BANNER === */
+.banner-section {
+  position: relative;
+  background: linear-gradient(to right, var(--light-gray), var(--white));
+  overflow: hidden;
+}
+
+.banner-decoration-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--pink);
+  opacity: 0.1;
+  border-bottom-left-radius: 50%;
+  z-index: 0;
+}
+
+.banner-decoration-2 {
+  position: absolute;
+  bottom: 0;
+  right: 5rem;
+  width: 250px;
+  height: 250px;
+  background-color: var(--mint);
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .banner-decoration-2 {
+    display: block;
+  }
+}
+
+/* === ABOUT SECTION === */
+.about-image {
+  height: 400px;
+}
+
+.about-accent {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+/* === PROCEDURES === */
+.icon-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* === CONTACT FORM === */
+.form-control:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 0.2rem rgba(250, 218, 221, 0.25);
+}
+
+/* === WHATSAPP BUTTON === */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  color: white;
+  opacity: 0.9;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .about-image {
+    height: 300px;
+  }
+  
+  .about-accent {
+    width: 6rem;
+    height: 6rem;
+  }
+}
